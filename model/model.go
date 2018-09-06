@@ -18,6 +18,7 @@ type TestBodys_Struct struct {
 	Name string `json:"name"`
 }
 
+//curl "localhost:9000/testbodys?key=value1" -d '{"Id":1,"Name":"123"}'
 func TestBodys(res http.ResponseWriter, req *http.Request){
 	res.Header().Add("Access-Control-Allow-Origin","*")
 	b, _ := ioutil.ReadAll(req.Body)
